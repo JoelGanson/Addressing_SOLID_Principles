@@ -21,4 +21,13 @@ In my solved Single Responsibility Principle version, I have moved the two metho
 
 ### OCP
 
+In the game Go Fish, a set of cards is valid to place down and score a point if all four cards match the same rank. But, a variant of the rules is to include the Jokers in the deck, which can match any rank.
+
+I have made the PlayingCard and Joker classes here, which both extend Card. In the violated folder, the PlayedSet class static function isValidSet will look at the class of the card, and see if it's a Joker class ICard or a PlayingCard class ICard.
+
+To solve this in the solved folder, I have instead given the ICard interface instead of the Card class, and given it a method to see if the card matches a given rank. For Joker, this always returns true, and for PlayingCard this returns true when it is equal to its own rank.
+
+This does make the resulting isValidSet method more complex, in that I have to loop over all expected values of rank, but now I don't have to check if a card is a certain class any more.
+
 ### ISP
+
