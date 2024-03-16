@@ -31,3 +31,8 @@ This does make the resulting isValidSet method more complex, in that I have to l
 
 ### ISP
 
+Given the variant rule of jokers, I wanted to implement the ability to play a game with or without them.
+
+In my violated/ISP folder, I created an IPlayer interface, and gave it the method to ask for cards, draw cards, play a set, or ask for jokers. I then made a class for players in games with jokers, and a class for players in games without jokers. BUT, for the class that is playing in games without jokers, we have to implement the method to ask for jokers?! So we make it throw an error.
+
+In my solved/ISP folder, I separated the IPlayer interface into four different interfaces, IPlayerCanAskForCards, IPlayerCanDrawCards, IPlayerCanPlaySet, and IPlayerCanAskForJokers. This separates the methods into different interfaces, and the PlayerInGameWithoutJokers class can now implement only the methods it needs to.
