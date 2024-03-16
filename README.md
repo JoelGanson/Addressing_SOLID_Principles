@@ -2,7 +2,7 @@
 
 This repository has been created for Red Deer Polytechnic class CPRO 2221 A, Java EE, Assignment 3.
 
-The requirements of the assignment are to choose 3 of 5 of the SOLID principles, create a "violated" and "solved" folder, and create subfolders in each one for each chosen principle.
+The requirements of the assignment are to choose 3 of 5 of the SOLID principles, create a "violated" and "solved" folder, and create sub-folders in each one for each chosen principle.
 
 The principles are Single Responsibility (SRP), Open/Closed (OCP), Liskov Substitution (LSP), Interface Segregation (ISP), and Dependency Inversion (DIP). I have chosen SRP, OCP, and ISP. I will explain my use of these principles in the section below, "Description of Principles"
 
@@ -27,7 +27,7 @@ I have made the PlayingCard and Joker classes here, which both extend Card. In t
 
 To solve this in the solved folder, I have instead given the ICard interface instead of the Card class, and given it a method to see if the card matches a given rank. For Joker, this always returns true, and for PlayingCard this returns true when it is equal to its own rank.
 
-This does make the resulting isValidSet method more complex, in that I have to loop over all expected values of rank, but now I don't have to check if a card is a certain class any more.
+This does make the resulting isValidSet method more complex, in that I have to loop over all expected values of rank, but now I don't have to check if a card is a certain class anymore.
 
 ### ISP
 
