@@ -10,12 +10,14 @@ We are then to come up with a unique use case that will demonstrate these princi
 
 # Chosen Use Case
 
-I am going to create classes for playing cards, a deck of cards, and a hand of cards, for the game Go Fish.
+I am going to create classes for playing cards and a deck of cards, for the game Go Fish.
 
 # Description of Principles
 ### SRP
 
+In my violated Single Responsibility Principle version, I have two classes, the PlayingCard and the DeckOfCards. Playing Card has a Rank and Suit, a constructor, and getters/setters. Deck of Cards has a list of PlayingCards, two constructors, and getter/setters. Notably, DeckOfCards also has the methods "shuffleDeck" and "drawCard".
 
+In my solved Single Responsibility Principle version, I have moved the two methods out into a pair of new classes called DeckShuffler and DeckDrawer, and made them static methods that take in a deck object.
 
 ### OCP
 
